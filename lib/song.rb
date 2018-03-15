@@ -48,7 +48,14 @@ class Song
     self.class.table_name
   end
 
-#
+#this instance method returns the values to be inserted using sql
+#it returns the string needed for the sql statement
+#this is needed to add the instance to the database
+#it creates an empty array for the values
+#it iterates over the array of column names
+#it takes the column name, which is also the attribute name
+#and returns the value for that attribute
+#it is equivalient to this values << :name (where this adds the value stored in the instance variable to the array)
   def values_for_insert
     values = []
     self.class.column_names.each do |col_name|
