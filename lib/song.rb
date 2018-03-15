@@ -41,7 +41,7 @@ class Song
     end
   end
 
-
+#this method returns the table name to be inserted with sequel
   def table_name_for_insert
     self.class.table_name
   end
