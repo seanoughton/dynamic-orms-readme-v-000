@@ -8,6 +8,8 @@ class Song
     self.to_s.downcase.pluralize
   end
 
+#this gets a hash from the database of just the table names
+#
   def self.column_names
     DB[:conn].results_as_hash = true
 
