@@ -42,10 +42,13 @@ class Song
   end
 
 #this instance method returns the table name to be inserted with sequel
+#this is here so that when an instance is created in memory, it can then be inserted into the db
+#you need the table name in order to do that
   def table_name_for_insert
     self.class.table_name
   end
 
+#
   def values_for_insert
     values = []
     self.class.column_names.each do |col_name|
