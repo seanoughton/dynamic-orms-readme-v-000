@@ -32,6 +32,9 @@ class Song
     attr_accessor col_name.to_sym
   end
 
+#this is the initialize statement for the class
+#an empty hash is passed in as an optional argument
+#each hash key(which is the name of one of the attr_accessor's, is assigned the value of the key)
   def initialize(options={})
     options.each do |property, value|
       self.send("#{property}=", value)
