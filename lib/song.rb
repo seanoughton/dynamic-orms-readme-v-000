@@ -9,7 +9,10 @@ class Song
   end
 
 #this gets a hash from the database of just the table names
-#
+#creates an empty array
+#then shovels each column name into the array
+#.compacts removes any nil elements in the array
+#the return value is an array of column names
   def self.column_names
     DB[:conn].results_as_hash = true
 
