@@ -26,6 +26,8 @@ class Song
     column_names.compact
   end
 
+#this iterates through the array of column names and assigns each name as an attr_accessor
+#using the .to_sym to convert each name to a symbol
   self.column_names.each do |col_name|
     attr_accessor col_name.to_sym
   end
